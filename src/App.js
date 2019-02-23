@@ -1,11 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {ApolloProvider} from 'react-apollo'
+import  client from './apolloClient'
+import { Routes } from './Routes';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+<Fragment>
+<div className="App">
+
+  <ApolloProvider client={client}>
+  <div></div>
+  <Routes/>
+  </ApolloProvider>
+
+
+      
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -20,7 +32,9 @@ class App extends Component {
             Learn React
           </a>
         </header>
+    
       </div>
+      </Fragment>
     );
   }
 }

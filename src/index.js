@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
 import 'zent/css/index.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap'
+import './../node_modules/bulma/css/bulma.css'
+import './../node_modules/bootstrap/dist/css/bootstrap-grid.min.css'
+import './../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'antd/dist/antd.css';
 ReactDOM.render(<App />, document.getElementById('root'));
 
