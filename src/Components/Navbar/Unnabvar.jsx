@@ -1,22 +1,31 @@
 
 
 import { Link } from 'react-router-dom'
+import { Menu,  } from 'antd';
 import {
     Collapse,
     Navbar,
     NavbarToggler,
     NavbarBrand,
     Nav,
-    NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavItem } from 'reactstrap';
 import React, { Component } from 'react'
 
 
+const SubMenu = Menu.SubMenu;
+
 export default class Unnabvar extends Component {
+  state = {
+    current: 'mail',
+  }
+
+  handleClick = (e) => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  }
     constructor(props) {
         super(props);
     
@@ -31,33 +40,32 @@ export default class Unnabvar extends Component {
         });
       }
 
-  render() {
+render() {
     return (
-      <div>
-      <div>
-      
-      <div>
-        <Navbar color="faded" className="navbar navbar-dark bg-dark" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+        <Navbar color="dark" light expand="md" className=" navbar-dark bg-dark">
+            <NavbarBrand href="#">HACKThon</NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
-              
+            <NavItem>
+            <NavLink  ><Link to="/Sign_in/">
+            <button class="btn btn-primary btn-outline-light my-2 my-sm-0" type="submit">Registrate</button>
+            </Link></NavLink>
+            </NavItem>
+            <NavItem>
+            <NavLink  ><Link to="/Sign_up/">
+            <button class="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Iniciar Sesión</button>
+            </Link></NavLink>
+            </NavItem>
+            
             </Nav>
-          </Collapse>
+        </Collapse>
         </Navbar>
-      </div>
+    
         
-    </div>
-    </div>
+    
     )
-  }
+}
 }
 
 

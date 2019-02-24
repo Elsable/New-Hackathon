@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {ApolloProvider} from 'react-apollo'
 import  client from './apolloClient'
-import { Routes } from './Routes';
+import Routes from './Routes/Routes';
+
 
 class App extends Component {
   render() {
