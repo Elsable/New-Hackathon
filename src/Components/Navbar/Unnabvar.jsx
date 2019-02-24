@@ -43,18 +43,18 @@ export default class Unnabvar extends Component {
 render() {
     return (
         <Navbar color="dark" light expand="md" className=" navbar-dark bg-dark">
-            <NavbarBrand href="#">HACKThon</NavbarBrand>
+            <Link to="/"><NavbarBrand>HACKThon</NavbarBrand></Link>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
             <NavItem>
             <NavLink  ><Link to="/Sign_in/">
-            <button class="btn btn-primary btn-outline-light my-2 my-sm-0" type="submit">Registrate</button>
+            <button class="btn btn-primary btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesión</button>
             </Link></NavLink>
             </NavItem>
             <NavItem>
             <NavLink  ><Link to="/Sign_up/">
-            <button class="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Iniciar Sesión</button>
+            <button class="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Registrate</button>
             </Link></NavLink>
             </NavItem>
             

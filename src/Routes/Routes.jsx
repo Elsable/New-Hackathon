@@ -4,17 +4,16 @@ import { Home } from '../Components/Home/index';
 import Unnabvar from '../Components/Navbar/Unnabvar';
 import Login from '../Components/NoAuth/login';
 import Register from '../Components/NoAuth/register';
-
-const Sign_in = () => <h2>Activities</h2>;  
-const Sign_up = () => <h2>Activities</h2>;
+import Check from '../Components/check';
 
 export class Routes extends Component {
-    
+  
   render() {
 return(
   <Router>
   <div>
-  <Unnabvar/>
+    
+  <Check/>
     
     <Route exact path="/" component={Home} />
     <Route  path="/Sign_up" component={Register} />
