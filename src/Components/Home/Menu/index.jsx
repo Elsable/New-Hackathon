@@ -1,5 +1,6 @@
 import React from 'react'
 import { Menu, Icon } from 'antd';
+import { Link, Redirect,withRouter} from 'react-router-dom'
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -51,9 +52,13 @@ export class MenuP extends React.Component {
           <Menu.Item key="Identidad">
             Identidad
           </Menu.Item>
+          
           <Menu.Item key="Trabajo" >
+          <Link to="/Works">
             Trabajo
+          </Link>
           </Menu.Item>
+        
           <Menu.Item key="Comunidad">
             Comunidad
           </Menu.Item>

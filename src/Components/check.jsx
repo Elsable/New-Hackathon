@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import $ from 'jquery'
 import Unnabvar from './Navbar/Unnabvar';
-import OnnavBar from './Navbar/Onnavbar';
+import NabvarRegister from './Navbar';
+import { MenuP } from './Home/Menu';
+
 export class Check extends Component {
     componentDidMount(){
         $.ajax({
@@ -12,18 +14,23 @@ export class Check extends Component {
           headers: JSON.parse(sessionStorage.getItem('user'))
         })
       }
+      
 
       render() {
         console.log(this.state)
         if(sessionStorage.getItem('user')){
             return (
                 <div>
-                    <OnnavBar/>
+                    <NabvarRegister name={JSON.parse(sessionStorage.getItem('user')).uid}/>
+                    <MenuP/>
                 </div>
         )
         }else{
             return(
+                <div>
                 <Unnabvar/>
+                <MenuP/>
+                </div>
             )
         }
     }

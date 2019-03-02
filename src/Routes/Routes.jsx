@@ -5,6 +5,7 @@ import Unnabvar from '../Components/Navbar/Unnabvar';
 import Login from '../Components/NoAuth/login';
 import Register from '../Components/NoAuth/register';
 import Check from '../Components/check';
+import Work from '../Components/Work';
 
 export class Routes extends Component {
   
@@ -16,8 +17,9 @@ return(
   <Check/>
     
     <Route exact path="/" component={Home} />
-    <Route  path="/Sign_up" component={Register} />
-    <Route  path="/Sign_in" component={Login} />
+    <Route path="/Works" component={Work}/>
+    {/* <Route  path="/Sign_up" component={Register} />
+    <Route  path="/Sign_in" component={Login} /> */}
     
   </div>
 </Router>

@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react'
-import { Carrusel } from './Carrusel';
-import {MenuP} from './Menu'
+// import {MenuP} from './Menu'
+import Carrusel from './Carrusel';
 export const Home=()=>(
     <Fragment>
-        <MenuP/>
+        
         <Carrusel/>
         <div>Inicio</div>
     </Fragment>
