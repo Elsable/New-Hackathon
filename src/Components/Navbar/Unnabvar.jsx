@@ -10,13 +10,10 @@ import {
     NavLink,
     NavItem } from 'reactstrap';
 import React, { Component } from 'react'
-import { Dialog, Affix} from 'zent';
+import { Dialog} from 'zent';
 import Register from '../NoAuth/register';
 import Sign_in from '../NoAuth/login';
 
-
-
-const { openDialog, closeDialog } = Dialog;
 
 export default class Unnabvar extends Component {
 
@@ -83,13 +80,14 @@ render() {
           visible={this.state.visible_up}
           onClose={() => this.Sign_up(false)}
         >
-          <Register />
+          <Register funcioncerrar={() => this.Sign_in(true)} funcionabrir={() => this.Sign_up(false)}/>
         </Dialog>
         <Dialog
           visible={this.state.visible_in}
           onClose={() => this.Sign_in(false)}
         >
-          <Sign_in funcioncerrar={() => this.Sign_in(false)} />
+          <Sign_in funcioncerrar={() => this.Sign_in(false)} funcionabrir={() => this.Sign_up(true)}/>
+
         </Dialog>
         
     </div>

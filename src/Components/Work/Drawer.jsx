@@ -1,6 +1,6 @@
 import { Drawer, Button } from 'antd'
 import React, { Component } from 'react'
-
+import { Row, Col } from 'reactstrap';
 
 export class Drawers extends Component {
     state = { visible: false, childrenDrawer: false };
@@ -43,24 +43,33 @@ export class Drawers extends Component {
             onClose={this.onClose}
             visible={this.state.visible}
             >
-            
-            <p class="h3">{this.props.NombreTrabajo}</p>
-            <br/>
-            <p class="h6">
-            <b>Nombre de la Empresa: </b>{this.props.NombreEmpresa}
-            <br/><br/><b>Perfil Requerido: </b>{this.props.PerfilRequerido}
-            <br/><br/><b>Nivel de Experticia: </b>{this.props.NivelExperticia}
-            <br/><br/><b>Ubicacion: </b>{this.props.Ubicacion}
-            <br/><br/><b>Horarios: </b>{this.props.Horarios}
-            <br/><br/><b>Benefícios: </b>{this.props.Benefícios}
-            <br/><br/><b>Ambiente Laboral: </b>{this.props.AmbienteLaboral}
-            <br/><br/><b>Tipo Contrato: </b>{this.props.TipoContrato}
-            <br/><br/><b>Remuneracion Aproximada: </b>{this.props.RemuneracionAproximada}
-            <br/><br/><b>Correo Electrónico: </b>{this.props.CorreoElectrónico}
-            
-            </p>
-            
-            
+            <div>
+            <Row>
+                
+                <Col xs="auto">
+                    <div style={{ paddingLeft:"5%" }}>
+                        <img  src={this.props.Imagen}  alt="250" width="250" />
+                    </div>
+                </Col>
+                <Col xs="auto">
+                    
+                    <p class="h3">{this.props.NombreTrabajo}</p>
+                    <br/>
+                    <p class="h6">
+                        <b>Nombre de la Empresa: </b>{this.props.NombreEmpresa}
+                        <br/><br/><b>Perfil Requerido: </b>{this.props.PerfilRequerido}
+                        <br/><br/><b>Nivel de Experticia: </b>{this.props.NivelExperticia}
+                        <br/><br/><b>Ubicacion: </b>{this.props.Ubicacion}
+                        <br/><br/><b>Horarios: </b>{this.props.Horarios}
+                        <br/><br/><b>Benefícios: </b>{this.props.Benefícios}
+                        <br/><br/><b>Ambiente Laboral: </b>{this.props.AmbienteLaboral}
+                        <br/><br/><b>Tipo Contrato: </b>{this.props.TipoContrato}
+                        <br/><br/><b>Remuneracion Aproximada: </b>{this.props.RemuneracionAproximada}
+                        <br/><br/><b>Correo Electrónico: </b>{this.props.CorreoElectrónico}
+                    </p>
+                </Col>
+            </Row> 
+            </div>
             <Drawer
                 title="Two-level Drawer"
                 width={'75%'}

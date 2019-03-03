@@ -1,34 +1,52 @@
 import React, { Component } from 'react'
 import { SearchInput, Notify } from 'zent';
 import Cardwork from './cardwork';
-import { Container, Row, Col } from 'reactstrap';
+import {  Row, Col } from 'reactstrap';
 
 import {Button, Icon,Input} from 'zent'
 
 
 export class Work extends Component {
-    state = {
-        value: ''
-    };
-    
+    constructor () {
+        super();
+        this.state = {
+            value: '',
+            value2:''
+        };
+        this.onChange = this.onChange.bind(this);
+        this.onChange2 = this.onChange2.bind(this);   
+    }
     onChange = evt => {
         this.setState({
         value: evt.target.value
         });
     };
-    
+    onChange2 = evt => {
+        this.setState({
+        value2: evt.target.value
+        });
+    };
     onPressEnter = () => {
-        const { value } = this.state;
-    
+        const { value, value2 } = this.state;
+        
         if (value) {
-        Notify.success(`Your enter content: ${value}`);
-        } else {
+            if(value2){
+                Notify.success(`Your enter content: ${value}, ${value2}`);
+            }else{
+                Notify.success(`Your enter content: ${value}`);
+            }
+            
+        } 
+        if(value2){
+            Notify.success(`Your enter content: ${value2}`);
+        }
+        else {
         Notify.error('Please input search content');
         }
     }
     
     render() {
-        const { value } = this.state;
+        // const { value } = this.state;
         return (
             <div className="container">
             <br/>
@@ -39,7 +57,7 @@ export class Work extends Component {
                 </Col>
                 <Col xs="5">Qué
                     <SearchInput
-                        value={value}
+                        value={this.state.value}
                         onChange={this.onChange}
                         placeholder="Search"
                         onPressEnter={this.onPressEnter}
@@ -47,7 +65,7 @@ export class Work extends Component {
                     <small className="form-text text-muted">Escriba Titulo, Renumeración, Empresa</small>
                 </Col>
                 <Col xs="5"> Donde
-                    <Input onChange={this.onChange} value={this.state.value} showClear />
+                    <Input onChange={this.onChange2} value={this.state.value2} onPressEnter={this.onPressEnter} showClear />
                     <small className="form-text text-muted">Ciudad, Estado</small>
                 </Col>
                 <Col xs="auto" >

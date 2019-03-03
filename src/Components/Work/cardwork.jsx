@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Row, Col,Card,  CardTitle,   } from 'reactstrap'
-// import { } from 'antd';
-import {Button} from 'zent'
-import Drawers, { Drawer } from './Drawer';
+import { Row, Col,Card,  CardTitle   } from 'reactstrap'
+import Drawers from './Drawer';
 
 export class Cardwork extends Component {
 NombreTrabajo="Programado fullstack";
@@ -16,6 +14,7 @@ AmbienteLaboral="Al trabajar con nosotros podras aprender nuevos retos";
 TipoContrato="Indifinido";
 RemuneracionAproximada="$1500";
 CorreoElectrónico="contacto@vianse.com";
+Imagen="https://static1.squarespace.com/static/57d830bde58c62769f259197/5887af33440243d06b87b7d1/5887afbc5016e1ca509084a0/1485287361047/vianse1+%281%29.png?format=2500w"
 
 constructor(props){
     super(props);
@@ -32,7 +31,7 @@ constructor(props){
         TipoContrato:"",
         RemuneracionAproximada:"",
         CorreoElectrónico:"",
-            
+        Imagen:""
     };   
 } 
 
@@ -46,7 +45,7 @@ constructor(props){
                 <Row>
                 <Col sm={{ size: 'auto'}}>
                     <div style={{ paddingLeft:"5%" }}>
-                        <img  src="https://static1.squarespace.com/static/57d830bde58c62769f259197/5887af33440243d06b87b7d1/5887afbc5016e1ca509084a0/1485287361047/vianse1+%281%29.png?format=2500w"  alt="160" width="250" />
+                        <img  src={this.Imagen}  alt="160" width="250" />
                     </div>
                 </Col>
                 <Col sm={{ size: 'auto'}}>
@@ -69,6 +68,7 @@ constructor(props){
                 NivelExperticia={this.NivelExperticia}
                 Ubicacion={this.Ubicacion}
                 Horarios={this.Horarios}
+                Imagen={this.Imagen}
                 Benefícios={this.Benefícios}
                 AmbienteLaboral={this.AmbienteLaboral}
                 TipoContrato={this.TipoContrato}

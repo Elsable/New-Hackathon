@@ -1,6 +1,6 @@
 import React from 'react'
 import { Menu, Icon } from 'antd';
-import { Link, Redirect,withRouter} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;

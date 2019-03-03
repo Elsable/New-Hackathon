@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
-import { Link, Redirect } from 'react-router-dom'
+import { FormGroup, Label,  Button } from 'reactstrap'
+import { Link } from 'react-router-dom'
 import { FormWithConstraints, FieldFeedbacks, FieldFeedback }from 'react-form-with-constraints'
 import $ from 'jquery';
 import { Notify } from 'zent';
-import axios from 'axios'
 
 class Register extends Component {
 
@@ -142,13 +141,14 @@ class Register extends Component {
           <div className="col-md-12 form-actions">
           <center>
             <Button  type="submit" name="commit" value="Registrar" className="Link-user btn-large btn btn-success "data-disable-with="Sign up">Crear cuenta</Button>
+            
           </center>
         </div>
         </FormWithConstraints>
         <br/>
             <hr/>
             <center>
-                <Link to="/user/Sign_in" className="Link-user " >Already have an account?</Link><br />
+                <Link to="#" className="Link-user  "  onClick={(event) => { this.props.funcioncerrar(); this.props.funcionabrir();}}>Already have an account?</Link><br />
             <br/>
             </center>
         </div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {Redirect ,Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import $ from 'jquery';
-import axios from 'axios'
+
 import { Notify } from 'zent';
 export class Sign_in extends Component {
     
@@ -73,7 +73,9 @@ export class Sign_in extends Component {
         </div>
         <br/>
         <hr/>
-        <Link to="/user/Sign_up" className="Link-user " >Don't have an account yet?</Link><br />
+        <Link to="#" className="Link-user " onClick={(event) => { this.props.funcioncerrar(); this.props.funcionabrir();}}>Don't have an account yet?</Link><br />
+
+        
         <Link to="/users/notifications/" className="Link-user " >Forgot your password?</Link><br />
         </div>
         
