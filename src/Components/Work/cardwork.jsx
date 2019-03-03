@@ -4,7 +4,7 @@ import Drawers from './Drawer';
 
 export class Cardwork extends Component {
 NombreTrabajo="Programado fullstack";
-NombreEmpresa="Vianse";
+NombreEmpresa="Unicornio";
 PerfilRequerido="Programar en php, saber laravel";
 NivelExperticia="Junior";
 Ubicacion="Ixmiquilpan";
@@ -14,7 +14,8 @@ AmbienteLaboral="Al trabajar con nosotros podras aprender nuevos retos";
 TipoContrato="Indifinido";
 RemuneracionAproximada="$1500";
 CorreoElectrónico="contacto@vianse.com";
-Imagen="https://static1.squarespace.com/static/57d830bde58c62769f259197/5887af33440243d06b87b7d1/5887afbc5016e1ca509084a0/1485287361047/vianse1+%281%29.png?format=2500w"
+Imagen="http://unicorniogt.com/wp-content/uploads/2017/03/logotipo_unicornio.fw_.png";
+Hace="1 dia";
 
 constructor(props){
     super(props);
@@ -31,33 +32,37 @@ constructor(props){
         TipoContrato:"",
         RemuneracionAproximada:"",
         CorreoElectrónico:"",
-        Imagen:""
+        Imagen:"",
+        Hace:""
     };   
 } 
 
     render() {
         return (
-            <div className="col-md-12" style={{ paddingTop:"3%" }}>
+            <Col>
+            <div className="" style={{ paddingTop:"3%" }}>
 
             <Card>
             <CardTitle><h1 ><n>{this.NombreTrabajo}</n></h1><hr/></CardTitle>
             <center>
                 <Row>
                 <Col sm={{ size: 'auto'}}>
-                    <div style={{ paddingLeft:"5%" }}>
+                    <div style={{ paddingLeft:"25%", paddingRight: "25%", }}>
+                        <b >Hace:</b>{this.Hace}<br/>
                         <img  src={this.Imagen}  alt="160" width="250" />
                     </div>
                 </Col>
                 <Col sm={{ size: 'auto'}}>
+                <div style={{ paddingLeft:"15%", paddingRight: "15%", }}>
                     <div style={{ 'text-align': 'left' }}>
                     <br/>
                         <b>Nombre de la empresa:</b> {this.NombreEmpresa} <br/>
                         <b>Ubicacion:</b> {this.Ubicacion}<br/>
-                        <b>Renumeración Aproximada:</b>{this.RemuneracionAproximada}
-                        <n >{this.fecha}</n>
+                        <b>Renumeración Aproximada:</b>{this.RemuneracionAproximada}<br/>
+                        
                     </div>
                     
-                    
+                    </div>
                 </Col>
                 
                 </Row>
@@ -82,6 +87,7 @@ constructor(props){
             </Card>
             
             </div>
+            </Col>
         )
         
     }

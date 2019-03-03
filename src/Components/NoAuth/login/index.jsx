@@ -41,7 +41,7 @@ export class Sign_in extends Component {
       return (
         <div className="">
         <center>
-          <h1>Registrar Usuario</h1>
+          <h1>Iniciar Sesión</h1>
           </center>
           <hr/>
           <div className="row">

@@ -37,10 +37,10 @@ export class Work extends Component {
             }
             
         } 
-        if(value2){
+        if(value.length <1 && value2){
             Notify.success(`Your enter content: ${value2}`);
         }
-        else {
+        if(value.length <1 && value2.length<1  ) {
         Notify.error('Please input search content');
         }
     }
@@ -75,7 +75,17 @@ export class Work extends Component {
                 </Col>
             </Row>
             <br/>
+            <Row>
+              
             <Cardwork/>
+            <Cardwork/>
+            <Cardwork/>
+            <Cardwork/>
+            <Cardwork/>
+            <Cardwork/>
+            <Cardwork/>
+              
+            </Row>
         </div>
         )
     }
