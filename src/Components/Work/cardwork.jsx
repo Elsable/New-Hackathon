@@ -40,7 +40,7 @@ constructor(props){
 
     render() {
         return (
-            <Col >
+            <div class="col-sm">
             <div className="gutter-box" style={{ paddingTop:"3%" }}>
 
             <Card>
@@ -88,7 +88,7 @@ constructor(props){
             </Card>
             
             </div>
-            </Col>
+            </div>
         )
         
     }
