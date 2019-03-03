@@ -36,7 +36,7 @@ export class Drawers extends Component {
             Ver mas...
             </Button>
             <Drawer
-            title={this.props.NombreTrabajo}
+            title="HAckthon"
             width={'65%'}
             height={'bottom'}
             closable={false}
@@ -44,6 +44,7 @@ export class Drawers extends Component {
             visible={this.state.visible}
             >
             <h6>
+            <h1><b>{this.props.NombreTrabajo}</b></h1><br/>
             <b>Nombre de la Empresa: </b>{this.props.NombreEmpresa}
             <br/><b>Perfil Requerido: </b>{this.props.PerfilRequerido}
             <br/><b>Nivel de Experticia: </b>{this.props.NivelExperticia}

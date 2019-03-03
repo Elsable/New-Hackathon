@@ -10,9 +10,11 @@ import {
     NavLink,
     NavItem } from 'reactstrap';
 import React, { Component } from 'react'
-import { Dialog, Button } from 'zent';
+import { Dialog, Affix} from 'zent';
 import Register from '../NoAuth/register';
 import Sign_in from '../NoAuth/login';
+
+
 
 const { openDialog, closeDialog } = Dialog;
 
@@ -53,6 +55,7 @@ export default class Unnabvar extends Component {
 render() {
     return (
       <div>
+         
         <Navbar color="dark" light expand="md" className=" navbar-dark bg-dark">
             <Link to="/"><NavbarBrand>HACKThon</NavbarBrand></Link>
         <NavbarToggler onClick={this.toggle} />
@@ -88,6 +91,7 @@ render() {
         >
           <Sign_in funcioncerrar={() => this.Sign_in(false)} />
         </Dialog>
+        
     </div>
         
     
