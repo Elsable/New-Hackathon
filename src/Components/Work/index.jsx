@@ -76,12 +76,24 @@ export class Work extends Component {
             </Row>
             <br/>
             <Row>
-              
+              <Col>
             <Cardwork/>
+            </Col>
+            <Col>
             <Cardwork/>
+            </Col>
+              <Col>
             <Cardwork/>
+            </Col>
+            <Col>
             <Cardwork/>
+            </Col>
+              <Col>
             <Cardwork/>
+            </Col>
+            <Col>
+            <Cardwork/>
+            </Col>
               
             </Row>
         </div>
