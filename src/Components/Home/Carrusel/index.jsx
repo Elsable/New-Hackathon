@@ -1,6 +1,5 @@
 import React,{Fragment, Component} from 'react'
-import { SearchInput, Notify } from 'zent'
-
+import { SearchInput, Notify, InfiniteScroller } from 'zent'
 
 export class Carrusel extends Component {
   state={
