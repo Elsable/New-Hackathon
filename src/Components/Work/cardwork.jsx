@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Row, Col,Card,  CardTitle   } from 'reactstrap'
+import { Card,Col ,  CardTitle   } from 'reactstrap'
 import Drawers from './Drawer';
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 
 export class Cardwork extends Component {
 NombreTrabajo="Programado fullstack";
@@ -40,8 +40,8 @@ constructor(props){
 
     render() {
         return (
-            <Col xs="auto">
-            <div className="" style={{ paddingTop:"3%" }}>
+            <Col >
+            <div className="gutter-box" style={{ paddingTop:"3%" }}>
 
             <Card>
             <CardTitle><h1 ><n>{this.NombreTrabajo}</n></h1><hr/></CardTitle>
