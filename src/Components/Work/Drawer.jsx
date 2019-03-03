@@ -43,19 +43,23 @@ export class Drawers extends Component {
             onClose={this.onClose}
             visible={this.state.visible}
             >
-            <h6>
-            <h1><b>{this.props.NombreTrabajo}</b></h1><br/>
+            
+            <p class="h3">{this.props.NombreTrabajo}</p>
+            <br/>
+            <p class="h6">
             <b>Nombre de la Empresa: </b>{this.props.NombreEmpresa}
-            <br/><b>Perfil Requerido: </b>{this.props.PerfilRequerido}
-            <br/><b>Nivel de Experticia: </b>{this.props.NivelExperticia}
-            <br/><b>Ubicacion: </b>{this.props.Ubicacion}
-            <br/><b>Horarios: </b>{this.props.Horarios}
-            <br/><b>Benefícios: </b>{this.props.Benefícios}
-            <br/><b>Ambiente Laboral: </b>{this.props.AmbienteLaboral}
-            <br/><b>Tipo Contrato: </b>{this.props.TipoContrato}
-            <br/><b>Remuneracion Aproximada: </b>{this.props.RemuneracionAproximada}
-            <br/><b>Correo Electrónico: </b>{this.props.CorreoElectrónico}
-            </h6>
+            <br/><br/><b>Perfil Requerido: </b>{this.props.PerfilRequerido}
+            <br/><br/><b>Nivel de Experticia: </b>{this.props.NivelExperticia}
+            <br/><br/><b>Ubicacion: </b>{this.props.Ubicacion}
+            <br/><br/><b>Horarios: </b>{this.props.Horarios}
+            <br/><br/><b>Benefícios: </b>{this.props.Benefícios}
+            <br/><br/><b>Ambiente Laboral: </b>{this.props.AmbienteLaboral}
+            <br/><br/><b>Tipo Contrato: </b>{this.props.TipoContrato}
+            <br/><br/><b>Remuneracion Aproximada: </b>{this.props.RemuneracionAproximada}
+            <br/><br/><b>Correo Electrónico: </b>{this.props.CorreoElectrónico}
+            
+            </p>
+            
             
             <Drawer
                 title="Two-level Drawer"
