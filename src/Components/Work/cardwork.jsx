@@ -67,7 +67,7 @@ constructor(props){
                 </Col>
                 
                 </Row>
-                <div style={{ 'text-align': 'right', paddingRight: "2%",}}>
+                {/* <div style={{ 'text-align': 'right', paddingRight: "2%",}}> */}
                 <Drawers NombreTrabajo={this.NombreTrabajo}
                 NombreEmpresa={this.NombreEmpresa}
                 PerfilRequerido={this.PerfilRequerido}
@@ -82,7 +82,7 @@ constructor(props){
                 CorreoElectrónico={this.CorreoElectrónico}
                 />
                 
-                    </div>
+                    {/* </div> */}
             </center>
             <br/>    
             </Card>
