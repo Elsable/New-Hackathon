@@ -38,49 +38,53 @@ export class Sign_in extends Component {
       }
 
     render() {
-        return (
-            
-        <div className="container">
-        
-        <h1>Iniciar Sesión</h1>
-        <br/>
-        <div className="form-inputs">
-        <Form onSubmit={this.handleLogin} >
-        <FormGroup>
-            <Label for="user_email" className="form-control-label email optional">Email</Label>
-            <input className="form-control password optional"   name="email" ref={(input) => this.email = input }  id="email" placeholder="Email" autoComplete ="email" autoFocus="autofocus"/>
-            
-        </FormGroup>
+      return (
+        <div className="">
+        <center>
+          <h1>Registrar Usuario</h1>
+          </center>
+          <hr/>
+          <div className="row">
+            <div className="col s8 offset-s2">
+            <Form onSubmit={this.handleLogin} >
+            <FormGroup>
+              <Label for="user_email" className="form-control-label email optional">Email</Label>
+              <input className="form-control password optional"   name="email" ref={(input) => this.email = input }  id="email" placeholder="Email" autoComplete ="email" autoFocus="autofocus"/>
+              
+            </FormGroup>
 
-        <FormGroup className="form-group password optional user_password">
-            <Label className="form-control-label password optional" for="user_password">Password</Label>
-              <input  className="form-control password optional"  name="password" type="password" ref={(input) => this.password = input } autoComplete="current-password" placeholder="Password" id="password" />
-        </FormGroup>
-        
-        <FormGroup check className="form-group boolean optional user_remember_me" >
-            <Label check className="form-control-label boolean optional" for="user_remember_me">
-                <Input name="user[remember_me]" type="hidden" value="0"/>
-                <Input id="user_remember_me" type="checkbox" className="boolean optional check_boxes" value="1" name="remember_me"/>{' '}
-                Remember me
-            </Label>
-        </FormGroup>
-        <div className="form-actions">
-        <Button type="submit" className="btn btn-success btn-sm "data-disable-with="Sign up" > Iniciar Sesión</Button>
-        
+            <FormGroup className="form-group password optional user_password">
+                <Label className="form-control-label password optional" for="user_password">Password</Label>
+                  <input  className="form-control password optional"  name="password" type="password" ref={(input) => this.password = input } autoComplete="current-password" placeholder="Password" id="password" />
+            </FormGroup>
+            
+            <FormGroup check className="form-group boolean optional user_remember_me" >
+                <Label check className="form-control-label boolean optional" for="user_remember_me">
+                    <Input name="user[remember_me]" type="hidden" value="0"/>
+                    <Input id="user_remember_me" type="checkbox" className="boolean optional check_boxes" value="1" name="remember_me"/>{' '}
+                    Remember me
+                </Label>
+            </FormGroup>
+            <div className="form-actions">
+            <Button type="submit" className="btn btn-success btn-sm "data-disable-with="Sign up" > Iniciar Sesión</Button>
+            
+            </div>
+          
+          </Form>
+          <br/>
+              <hr/>
+              <center>
+                <Link to="#" className="Link-user " onClick={(event) => { this.props.funcioncerrar(); this.props.funcionabrir();}}>Don't have an account yet?</Link><br />
+                <Link to="/users/notifications/" className="Link-user " >Forgot your password?</Link><br />
+                <br/>
+              </center>
+          </div>
+          
+          </div>
         </div>
+      );
       
-    </Form>
-        </div>
-        <br/>
-        <hr/>
-        <Link to="#" className="Link-user " onClick={(event) => { this.props.funcioncerrar(); this.props.funcionabrir();}}>Don't have an account yet?</Link><br />
-
-        
-        <Link to="/users/notifications/" className="Link-user " >Forgot your password?</Link><br />
-        </div>
-        
-    
-        )
+ 
     }
 }
 
