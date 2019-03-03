@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Card, Col, CardTitle   } from 'reactstrap'
+import { Row, Col,Card,  CardTitle   } from 'reactstrap'
 import Drawers from './Drawer';
-import { Row, Col as Col1 } from 'antd';
+import { Row, Col } from 'antd';
 
 export class Cardwork extends Component {
 NombreTrabajo="Programado fullstack";
@@ -40,7 +40,7 @@ constructor(props){
 
     render() {
         return (
-            <Col span="8">
+            <Col xs="auto">
             <div className="" style={{ paddingTop:"3%" }}>
 
             <Card>
@@ -67,7 +67,7 @@ constructor(props){
                 </Col>
                 
                 </Row>
-                {/* <div style={{ 'text-align': 'right', paddingRight: "2%",}}> */}
+                <div style={{ 'text-align': 'right', paddingRight: "2%",}}>
                 <Drawers NombreTrabajo={this.NombreTrabajo}
                 NombreEmpresa={this.NombreEmpresa}
                 PerfilRequerido={this.PerfilRequerido}
@@ -82,7 +82,7 @@ constructor(props){
                 CorreoElectrónico={this.CorreoElectrónico}
                 />
                 
-                    {/* </div> */}
+                    </div>
             </center>
             <br/>    
             </Card>
