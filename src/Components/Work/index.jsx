@@ -50,7 +50,7 @@ export class Work extends Component {
         return (
             <div className="container">
             <br/>
-
+      
             <Row>
                 <Col xs="auto" >
                     <br/>

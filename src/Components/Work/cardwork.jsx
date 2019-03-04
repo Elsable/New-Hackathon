@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import { Card,Col ,  CardTitle   } from 'reactstrap'
 import Drawers from './Drawer';
 import { Row } from 'antd';
+import {previewImage} from 'zent'
 
+const Imagen = [
+  "http://unicorniogt.com/wp-content/uploads/2017/03/logotipo_unicornio.fw_.png"
+    
+  ];
+  
 export class Cardwork extends Component {
 NombreTrabajo="Programado fullstack";
 NombreEmpresa="Unicornio";
@@ -15,10 +21,11 @@ AmbienteLaboral="Al trabajar con nosotros podras aprender nuevos retos";
 TipoContrato="Indifinido";
 RemuneracionAproximada="$1500";
 CorreoElectrónico="contacto@vianse.com";
-Imagen="http://unicorniogt.com/wp-content/uploads/2017/03/logotipo_unicornio.fw_.png";
+// Imagen
 Imagen1="https://cdn-images-1.medium.com/max/1200/0*owwiuHZkUm4AMr-i.png"
 Imagen2="https://d8bwfgv5erevs.cloudfront.net/cdn/13/images/curso-online-ruby-on-rails_l_primaria_1_1520261687.jpg"
 Hace="1 dia";
+
 
 constructor(props){
     super(props);
@@ -40,13 +47,30 @@ constructor(props){
         Imagen2:"",
         Hace:""
     };   
-} 
+}
+ handlePreview = (e) => {
+    previewImage({
+      images: Imagen,
+      index: Imagen.indexOf(e.target.src),
+      parentComponent: this,
+      scaleRatio: 3
+    });
+  }
+//   handlePrevyy
 
     render() {
         return (
             <div class="col-sm">
             <div className="gutter-box" style={{ paddingTop:"3%" }}>
+            <div className="image-preview-demo">
+            <img src={this.setState.Imagen} key={this.Imagen.indexOf(e.target.src)} onClick={this.handlePreview} alt="" width="160" />
 
+        {/* {
+          Imagen.map((image, index) => {
+            return (<img src={image} key={index} onClick={this.handlePreview} alt="" width="160" />);
+          })
+        } */}
+      </div>
             <Card>
             <CardTitle><h1 ><n>{this.NombreTrabajo}</n></h1><hr/></CardTitle>
             <center>

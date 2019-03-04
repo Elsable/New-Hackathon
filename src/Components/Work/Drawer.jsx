@@ -30,6 +30,8 @@ export class Drawers extends Component {
     };
 
     render() {
+    
+            
         return (
             <div className="container">
             <Button type="primary" onClick={this.showDrawer}>
@@ -48,6 +50,7 @@ export class Drawers extends Component {
                 
             <div class="col-sm">
                     {/* <div style={{ padding: }}> */}
+               
                         <img  src={this.props.Imagen}  alt="500" width="500" />
                         <br/>
                         <Row>
