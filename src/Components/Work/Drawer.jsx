@@ -46,12 +46,21 @@ export class Drawers extends Component {
             <div>
             <Row>
                 
-                <Col xs="auto">
-                    <div style={{ paddingLeft:"5%" }}>
-                        <img  src={this.props.Imagen}  alt="250" width="250" />
-                    </div>
-                </Col>
-                <Col xs="auto">
+            <div class="col-sm">
+                    {/* <div style={{ padding: }}> */}
+                        <img  src={this.props.Imagen}  alt="500" width="500" />
+                        <br/>
+                        <Row>
+                        <div class="col-sm">
+                        <img  src={this.props.Imagen1}  alt="250" width="250" class="img-thumbnail"/>
+                        </div>
+                        <div class="col-sm">
+                        <img  src={this.props.Imagen2}  alt="250" width="250" class="img-thumbnail"/>
+                        </div>
+                        </Row>
+                    {/* </div> */}
+                </div>
+                <div class="col-sm">
                     
                     <p class="h3">{this.props.NombreTrabajo}</p>
                     <br/>
@@ -67,7 +76,7 @@ export class Drawers extends Component {
                         <br/><br/><b>Remuneracion Aproximada: </b>{this.props.RemuneracionAproximada}
                         <br/><br/><b>Correo Electrónico: </b>{this.props.CorreoElectrónico}
                     </p>
-                </Col>
+                </div>
             </Row> 
             </div>
             <Drawer

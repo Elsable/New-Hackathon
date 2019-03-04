@@ -16,6 +16,8 @@ TipoContrato="Indifinido";
 RemuneracionAproximada="$1500";
 CorreoElectrónico="contacto@vianse.com";
 Imagen="http://unicorniogt.com/wp-content/uploads/2017/03/logotipo_unicornio.fw_.png";
+Imagen1="https://cdn-images-1.medium.com/max/1200/0*owwiuHZkUm4AMr-i.png"
+Imagen2="https://d8bwfgv5erevs.cloudfront.net/cdn/13/images/curso-online-ruby-on-rails_l_primaria_1_1520261687.jpg"
 Hace="1 dia";
 
 constructor(props){
@@ -34,6 +36,8 @@ constructor(props){
         RemuneracionAproximada:"",
         CorreoElectrónico:"",
         Imagen:"",
+        Imagen1:"",
+        Imagen2:"",
         Hace:""
     };   
 } 
@@ -67,7 +71,7 @@ constructor(props){
                 </Col>
                 
                 </Row>
-                <div style={{ 'text-align': 'right', paddingRight: "2%",}}>
+                {/* <div style={{ 'text-align': 'right'}}> */}
                 <Drawers NombreTrabajo={this.NombreTrabajo}
                 NombreEmpresa={this.NombreEmpresa}
                 PerfilRequerido={this.PerfilRequerido}
@@ -75,6 +79,8 @@ constructor(props){
                 Ubicacion={this.Ubicacion}
                 Horarios={this.Horarios}
                 Imagen={this.Imagen}
+                Imagen1={this.Imagen1}
+                Imagen2={this.Imagen2}
                 Benefícios={this.Benefícios}
                 AmbienteLaboral={this.AmbienteLaboral}
                 TipoContrato={this.TipoContrato}
@@ -82,7 +88,7 @@ constructor(props){
                 CorreoElectrónico={this.CorreoElectrónico}
                 />
                 
-                    </div>
+                    {/* </div> */}
             </center>
             <br/>    
             </Card>
