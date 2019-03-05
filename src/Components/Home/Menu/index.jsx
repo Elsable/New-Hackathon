@@ -59,9 +59,6 @@ export class MenuP extends React.Component {
           </Link>
           </Menu.Item>
         
-          <Menu.Item key="Comunidad">
-            Comunidad
-          </Menu.Item>
           <Menu.Item key="Sugerencias" >
             Sugerencias
 

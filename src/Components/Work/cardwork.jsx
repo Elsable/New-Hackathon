@@ -10,20 +10,24 @@ const Imagen = [
   ];
   
 export class Cardwork extends Component {
-NombreTrabajo="Programado fullstack";
-NombreEmpresa="Unicornio";
-PerfilRequerido="Programar en php, saber laravel";
+NombreTrabajo="Programador fullstack";
+NombreEmpresa="Programadores Chile";
+PerfilRequerido="Programar en ruby, saber Rails";
 NivelExperticia="Junior";
 Ubicacion="Ixmiquilpan";
 Horarios="2:34-10:20";
-Benefícios="Desayunos gratis y viernes de alegria(sale uno hora antes)";
+Benefícios="Desayunos gratis y viernes de alegria(sale una hora antes)";
 AmbienteLaboral="Al trabajar con nosotros podras aprender nuevos retos";
 TipoContrato="Indifinido";
 RemuneracionAproximada="$1500";
-CorreoElectrónico="contacto@vianse.com";
-// Imagen
-Imagen1="https://cdn-images-1.medium.com/max/1200/0*owwiuHZkUm4AMr-i.png"
-Imagen2="https://d8bwfgv5erevs.cloudfront.net/cdn/13/images/curso-online-ruby-on-rails_l_primaria_1_1520261687.jpg"
+CorreoElectrónico="contacto@programadoreschile.com";
+Imagen="https://programadoreschile.org/assets/img/logo.png"
+Imagen1="https://i.blogs.es/8b09a4/progate_featuredimage/450_1000.jpg"
+Imagen2="https://img.blogs.es/anexom/wp-content/uploads/2018/03/Programar.jpg"
+Imagen3="https://cdn-images-1.medium.com/max/1200/0*owwiuHZkUm4AMr-i.png"
+Imagen4="https://d8bwfgv5erevs.cloudfront.net/cdn/13/images/curso-online-ruby-on-rails_l_primaria_1_1520261687.jpg"
+Imagen5="https://d8bwfgv5erevs.cloudfront.net/cdn/13/images/curso-online-ruby-on-rails_l_primaria_1_1520261687.jpg"
+Imagen6="https://d8bwfgv5erevs.cloudfront.net/cdn/13/images/curso-online-ruby-on-rails_l_primaria_1_1520261687.jpg"
 Hace="1 dia";
 
 
@@ -45,6 +49,8 @@ constructor(props){
         Imagen:"",
         Imagen1:"",
         Imagen2:"",
+        Imange3:"",
+        Imagen4:"",
         Hace:""
     };   
 }
@@ -59,20 +65,13 @@ constructor(props){
 //   handlePrevyy
 
     render() {
+        
         return (
-            <div class="col-sm">
+            <div className="col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <div className="gutter-box" style={{ paddingTop:"3%" }}>
-            <div className="image-preview-demo">
-            <img src={this.setState.Imagen} key={this.Imagen.indexOf(e.target.src)} onClick={this.handlePreview} alt="" width="160" />
-
-        {/* {
-          Imagen.map((image, index) => {
-            return (<img src={image} key={index} onClick={this.handlePreview} alt="" width="160" />);
-          })
-        } */}
-      </div>
+    
             <Card>
-            <CardTitle><h1 ><n>{this.NombreTrabajo}</n></h1><hr/></CardTitle>
+            <CardTitle><h1 ><b>{this.NombreTrabajo}</b></h1><hr/></CardTitle>
             <center>
                 <Row>
                 <Col sm={{ size: 'auto'}}>
@@ -83,7 +82,7 @@ constructor(props){
                 </Col>
                 <Col sm={{ size: 'auto'}}>
                 <div style={{ paddingLeft:"15%", paddingRight: "15%", }}>
-                    <div style={{ 'text-align': 'left' }}>
+                    <div style={{ 'textAlign': 'left' }}>
                     <br/>
                         <b>Nombre de la empresa:</b> {this.NombreEmpresa} <br/>
                         <b>Ubicacion:</b> {this.Ubicacion}<br/>
@@ -105,6 +104,10 @@ constructor(props){
                 Imagen={this.Imagen}
                 Imagen1={this.Imagen1}
                 Imagen2={this.Imagen2}
+                Imagen3={this.Imagen3}
+                Imagen4={this.Imagen4}
+                Imagen5={this.Imagen5}
+                Imagen6={this.Imagen6}
                 Benefícios={this.Benefícios}
                 AmbienteLaboral={this.AmbienteLaboral}
                 TipoContrato={this.TipoContrato}

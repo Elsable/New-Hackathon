@@ -74,10 +74,10 @@ export class Work extends Component {
                     </center>
                 </Col>
             </Row>
-            
+            <hr/>
             <br/>
-            <div class="container">
-                <div class="row">
+            <div className="container">
+                <div className="row">
                 <Cardwork/><Cardwork/><Cardwork/><Cardwork/><Cardwork/>
                 </div>
             </div>

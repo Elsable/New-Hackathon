@@ -54,21 +54,21 @@ render() {
       <div>
          
         <Navbar color="dark" light expand="md" className=" navbar-dark bg-dark">
-            <Link to="/"><NavbarBrand>HACKThon</NavbarBrand></Link>
+        <NavbarBrand><Link to="/">HACKThon</Link></NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
             <NavItem>
             <NavLink  >
               {/* <Link to="/Sign_in/"> */}
-              <button onClick={()=>this.Sign_in(true)} class="btn btn-primary btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesión</button>
+              <button onClick={()=>this.Sign_in(true)} className="btn btn-primary btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesión</button>
               {/* </Link> */}
               </NavLink>
             </NavItem>
             <NavItem>
             <NavLink  >
             {/* <Link to="/Sign_up/"> */}
-            <button   onClick={() => this.Sign_up(true)} class="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Registrate</button>
+            <button   onClick={() => this.Sign_up(true)} className="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Registrate</button>
             {/* </Link> */}
             </NavLink>
             </NavItem>

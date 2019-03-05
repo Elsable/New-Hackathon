@@ -1,8 +1,11 @@
 import { Drawer, Button } from 'antd'
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap';
+import Cardimage from './cardimage';
 
 export class Drawers extends Component {
+
+    
     state = { visible: false, childrenDrawer: false };
 
     showDrawer = () => {
@@ -30,15 +33,62 @@ export class Drawers extends Component {
     };
 
     render() {
-    
-            
+        
+        if(this.props.Imagen1.length>5){
+            if(this.props.Imagen2.length>5){
+                if(this.props.Imagen3.length>5){
+                    if(this.props.Imagen4.length>5){
+                        if(this.props.Imagen5.length>5){
+                            if(this.props.Imagen6.length>5){
+                                var PasImagen2 = [
+                                    this.props.Imagen1, 
+                                    this.props.Imagen2, 
+                                    this.props.Imagen3,
+                                    this.props.Imagen4,
+                                    this.props.Imagen5,
+                                    this.props.Imagen6]
+                            }else{
+                                PasImagen2 = [
+                                    this.props.Imagen1,
+                                    this.props.Imagen2,
+                                    this.props.Imagen3,
+                                    this.props.Imagen4,
+                                    this.props.Imagen5]
+                            }
+                        }else{
+                            PasImagen2 = [
+                                this.props.Imagen1,
+                                this.props.Imagen2,
+                                this.props.Imagen3,
+                                this.props.Imagen4]
+                        }
+                    }else{
+                        PasImagen2 = [
+                            this.props.Imagen1,
+                            this.props.Imagen2,
+                            this.props.Imagen3]
+                    }
+                }else{
+                    PasImagen2 = [
+                        this.props.Imagen1,
+                        this.props.Imagen2]
+                }
+            }
+            if(this.props.Imagen1.length>0){
+
+            }else{
+                var PasImagen2 = [
+                    "Error"]
+            }
+        }
+        
         return (
             <div className="container">
             <Button type="primary" onClick={this.showDrawer}>
             Ver mas...
             </Button>
             <Drawer
-            title="HAckthon"
+            title={this.props.NombreTrabajo}
             width={'65%'}
             height={'bottom'}
             closable={false}
@@ -47,27 +97,17 @@ export class Drawers extends Component {
             >
             <div>
             <Row>
-                
-            <div class="col-sm">
-                    {/* <div style={{ padding: }}> */}
-               
-                        <img  src={this.props.Imagen}  alt="500" width="500" />
-                        <br/>
-                        <Row>
-                        <div class="col-sm">
-                        <img  src={this.props.Imagen1}  alt="250" width="250" class="img-thumbnail"/>
-                        </div>
-                        <div class="col-sm">
-                        <img  src={this.props.Imagen2}  alt="250" width="250" class="img-thumbnail"/>
-                        </div>
-                        </Row>
-                    {/* </div> */}
-                </div>
-                <div class="col-sm">
-                    
-                    <p class="h3">{this.props.NombreTrabajo}</p>
-                    <br/>
-                    <p class="h6">
+                    <Col>
+                <center>
+                <img  src={this.props.Imagen}  alt="500" width="500" />
+                <hr/>
+                </center>             
+                <br/>
+                </Col>
+                </Row>
+            <Row>
+                <div className="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <p className="h6">
                         <b>Nombre de la Empresa: </b>{this.props.NombreEmpresa}
                         <br/><br/><b>Perfil Requerido: </b>{this.props.PerfilRequerido}
                         <br/><br/><b>Nivel de Experticia: </b>{this.props.NivelExperticia}
@@ -78,8 +118,14 @@ export class Drawers extends Component {
                         <br/><br/><b>Tipo Contrato: </b>{this.props.TipoContrato}
                         <br/><br/><b>Remuneracion Aproximada: </b>{this.props.RemuneracionAproximada}
                         <br/><br/><b>Correo Electrónico: </b>{this.props.CorreoElectrónico}
+                        <br/><br/><br/><br/>
                     </p>
                 </div>
+                <div className="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                
+                    <Cardimage PasImagen2={PasImagen2}/>
+                
+            </div>
             </Row> 
             </div>
             <Drawer
