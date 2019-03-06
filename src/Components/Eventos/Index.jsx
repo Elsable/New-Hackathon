@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { SearchInput, Notify } from 'zent';
 import {  Row, Col } from 'reactstrap';
-import {Calendar} from 'primereact/calendar';
 
 export class Eventos extends Component {
     constructor() {
@@ -49,7 +48,7 @@ export class Eventos extends Component {
                     <small className="form-text text-muted">Escriba Titulo del evento</small>
             </Col>
             <Col xs="6">Filtrar por:
-            <Calendar value={this.state.date2} onChange={(e) => this.setState({date2: e.value})} locale={es} dateFormat="dd/mm/yy" />
+            {/* <Calendar value={this.state.date2} onChange={(e) => this.setState({date2: e.value})} locale={es} dateFormat="dd/mm/yy" /> */}
             </Col>
             </Row>
         </div>
