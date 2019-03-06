@@ -125,6 +125,7 @@ export class Drawers extends Component {
                 <div className="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 
                     <Cardimage PasImagen2={PasImagen2}/>
+                    <br/><br/>
                 
             </div>
             </Row> 
