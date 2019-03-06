@@ -30,6 +30,7 @@ export class Cardimage extends Component {
               return (   <Col xs={6} sm={6}><img src={image} key={index} onClick={this.handlePreview} alt="" width="250" /></Col>);
             })
           }
+          <br/><br/>
           </div>
         
         )
