@@ -38,21 +38,24 @@ export class MenuP extends React.Component {
             Noticias
           </Menu.Item>
           <Menu.Item key="Chat">
+          <Link to="/Chat">
             Chat
+          </Link>
           </Menu.Item>
           <Menu.Item key="Comunidad" >
             Comunidad
           </Menu.Item>
           <Menu.Item key="somos">
-               Quienes somos
-          </Menu.Item>
-          <Menu.Item key="Eventos" >
-            Eventos
+              Quienes somos
           </Menu.Item>
           <Menu.Item key="Identidad">
             Identidad
           </Menu.Item>
-          
+          <Menu.Item key="Eventos" >
+          <Link to="/Eventos">
+            Eventos
+          </Link>
+          </Menu.Item>
           <Menu.Item key="Trabajo" >
           <Link to="/Works">
             Trabajo

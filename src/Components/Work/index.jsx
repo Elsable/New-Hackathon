@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { SearchInput, Notify } from 'zent';
-import Cardwork from './cardwork';
 import {  Row, Col } from 'reactstrap';
+import Cardwork from './cardwork';
 
-import {Button, Icon,Input} from 'zent'
 
+import {Affix,Tag,Button, Icon,Input} from 'zent'
 
 export class Work extends Component {
     constructor () {
@@ -33,6 +33,7 @@ export class Work extends Component {
             if(value2){
                 Notify.success(`Your enter content: ${value}, ${value2}`);
             }else{
+                
                 Notify.success(`Your enter content: ${value}`);
             }
             
@@ -46,11 +47,9 @@ export class Work extends Component {
     }
     
     render() {
-        // const { value } = this.state;
         return (
             <div className="container">
             <br/>
-      
             <Row>
                 <Col xs="auto" >
                     <br/>
@@ -75,6 +74,10 @@ export class Work extends Component {
                 </Col>
             </Row>
             <hr/>
+            <Affix offsetTop={50}>
+            <Tag color="#9370db" outline style={{ fontSize: 20 }}>{this.state.value}</Tag>
+            <Tag color="green" outline style={{ fontSize: 20 }}>{this.state.value2}</Tag>
+            </Affix>
             <br/>
             <div className="container">
                 <div className="row">

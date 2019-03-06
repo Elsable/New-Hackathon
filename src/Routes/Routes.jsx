@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Home } from '../Components/Home/index';
 import Check from '../Components/check';
 import Work from '../Components/Work';
+import Chat from '../Components/Chat';
+import Eventos from '../Components/Eventos/Index';
 
 export class Routes extends Component {
   
@@ -10,10 +12,12 @@ export class Routes extends Component {
 return(
 
       <Router>
-        <div>
+        <div >
           <Check/>
           <Route exact path="/" component={Home} />
           <Route path="/Works" component={Work}/>
+          <Route path="/Chat" component={Chat}/>
+          <Route path="/Eventos" component={Eventos}/>
           {/* <Route  path="/Sign_up" component={Register} />
           <Route  path="/Sign_in" component={Login} /> */}
         </div>

@@ -130,7 +130,7 @@ export class Drawers extends Component {
             </Row> 
             </div>
             <Drawer
-                title="Two-level Drawer"
+                title={this.props.NombreTrabajo}
                 width={'75%'}
                 closable={false}
                 onClose={this.onChildrenDrawerClose}
