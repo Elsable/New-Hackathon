@@ -83,8 +83,9 @@ export class Drawers extends Component {
         }
         
         return (
-            <div className="container">
-            <Button type="primary" onClick={this.showDrawer}>
+            <div>
+                <br/>
+            <Button type="primary" onClick={this.showDrawer} style={{ "margin":'auto' }}>
             Ver mas...
             </Button>
             <Drawer
