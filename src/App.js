@@ -4,20 +4,18 @@ import './App.css';
 import {ApolloProvider} from 'react-apollo'
 import  client from './apolloClient'
 import Routes from './Routes/Routes';
-
-
+import $ from 'jquery'
 class App extends Component {
-  render() {
-    return (
-<Fragment>
-<div className="App">
 
+
+render() {
+    return (
+  <Fragment>
+    <div className="App">
   <ApolloProvider client={client}>
   <div></div>
   <Routes/>
   </ApolloProvider>
-
-
       
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

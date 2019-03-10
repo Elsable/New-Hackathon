@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FormGroup, Label,  Button } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { FormWithConstraints, FieldFeedbacks, FieldFeedback }from 'react-form-with-constraints'
 import $ from 'jquery';
 import { Notify } from 'zent';
@@ -22,6 +22,7 @@ class Register extends Component {
       this.setState({ [e.target.id]: e.target.value });
     
     };
+    
     handleRegister = (e) => {
         e.preventDefault();
         this.form.validateFields();
@@ -40,11 +41,12 @@ class Register extends Component {
       ){
         $.ajax({
           type: 'POST',
-          url:'https://shopping-123s.herokuapp.com/auth',
+          url:'http://localhost:3001/auth',
           data: {
-            email: this.email.value,
-            password: this.password.value,
-            password_confirmation: this.password.value
+              email: this.email.value,
+              password: this.password.value,
+              password_confirmation: this.password.value
+
           },
           success: function() {
             Notify.config({ duration: 5000 })
@@ -158,4 +160,6 @@ class Register extends Component {
     );
   }
 }
-export  default Register
+export  default withRouter(Register)
+
+

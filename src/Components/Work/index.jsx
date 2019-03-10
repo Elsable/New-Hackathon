@@ -84,6 +84,7 @@ export class Work extends Component {
                 <Cardwork/><Cardwork/><Cardwork/><Cardwork/><Cardwork/>
                 </div>
             </div>
+            <br/>
         </div>
         )
     }

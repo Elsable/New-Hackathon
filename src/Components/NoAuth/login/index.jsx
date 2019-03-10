@@ -1,20 +1,32 @@
 import React, { Component } from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Link} from 'react-router-dom'
+import { Link, withRouter} from 'react-router-dom'
 import $ from 'jquery';
 
 import { Notify } from 'zent';
+
 export class Sign_in extends Component {
-    
+ 
+  constructor(props){
+    super(props)
+    this.state={
+      email:'',
+      password:''
+    }
+    this.handleLogin = this.handleLogin.bind(this)
+  }
+  
     handleLogin = (e) => {
         e.preventDefault();
         $.ajax({
           type: 'POST',
-          url:'https://shopping-123s.herokuapp.com/auth/sign_in',
+          url:'http://localhost:3001/auth/sign_in',
           data: {
-            email: this.email.value,
-            password: this.password.value
+            
+              email: this.email.value,
+              password: this.password.value
           },
+          
           success: function() {
             Notify.config({ duration: 5000 })
             Notify.success('Bienvenido a nuestra plataforma')
@@ -33,7 +45,6 @@ export class Sign_in extends Component {
               uid: response.data.uid
             }));
           this.props.history.push('/');
-          
         })
       }
 
@@ -88,4 +99,4 @@ export class Sign_in extends Component {
     }
 }
 
-export default Sign_in
+export default withRouter(Sign_in)

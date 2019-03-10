@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import {
     Collapse,
     Navbar,
@@ -26,7 +26,7 @@ export class NabvarRegister extends Component {
         e.preventDefault()
         $.ajax({
         type:'DELETE',
-        url:"https://shopping-123s.herokuapp.com/auth/sign_out",
+        url:"http://localhost:3001/auth/sign_out",
         data: JSON.parse(sessionStorage.user),
         success: function() {
             Notify.config({ duration: 5000 })
@@ -49,7 +49,10 @@ render() {
     return (
     <div>
         <Navbar color="dark" light expand="md" className=" navbar-dark bg-dark">
-            <Link to="/"><NavbarBrand>HACKThon {this.props.name}</NavbarBrand></Link>
+            <Link to="/"><NavbarBrand>
+            <Link to="/User/edit">
+            HACKThon {this.props.name}
+            </Link></NavbarBrand></Link>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -57,7 +60,7 @@ render() {
             
             <NavLink  >
             
-            <button   onClick={this.handleSignOut}  class="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Cerrar Sesión</button>
+            <button   onClick={this.handleSignOut}  className="btn btn-primary btn-outline-light my-2 my-sm-0 btn-succes" type="submit">Cerrar Sesión</button>
             
             </NavLink>
             </NavItem>
@@ -70,4 +73,4 @@ render() {
 }
 }
 
-export default NabvarRegister
+export default withRouter(NabvarRegister)

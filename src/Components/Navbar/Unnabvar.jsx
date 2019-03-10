@@ -80,7 +80,9 @@ render() {
           visible={this.state.visible_up}
           onClose={() => this.Sign_up(false)}
         >
+        
           <Register funcioncerrar={() => this.Sign_in(true)} funcionabrir={() => this.Sign_up(false)}/>
+        
         </Dialog>
         <Dialog
           visible={this.state.visible_in}

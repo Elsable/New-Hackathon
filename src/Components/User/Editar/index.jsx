@@ -1,16 +1,14 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react';
 
+import { Delete } from './delete';
 export default class EditarUser extends PureComponent {
-  static propTypes = {
-
-  }
-
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+	
+	render() {
+		return (
+			<body>
+		
+			<Delete/>
+			</body>
+		);
+	}
 }
