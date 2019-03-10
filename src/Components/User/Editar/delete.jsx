@@ -7,7 +7,8 @@ export class Delete extends Component {
         e.preventDefault()
         $.ajax({
         type:'DELETE',
-        url:"http://localhost:3001/auth/",
+        // url:"http://localhost:3001/auth/",
+        url:"https://server-gpaj.herokuapp.com/auth/",
         data: JSON.parse(sessionStorage.user),
         
         })

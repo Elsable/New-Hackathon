@@ -20,7 +20,8 @@ export class Sign_in extends Component {
         e.preventDefault();
         $.ajax({
           type: 'POST',
-          url:'http://localhost:3001/auth/sign_in',
+          // url:'http://localhost:3001/auth/sign_in',
+          url:'https://server-gpaj.herokuapp.com/auth/sign_in',
           data: {
             
               email: this.email.value,

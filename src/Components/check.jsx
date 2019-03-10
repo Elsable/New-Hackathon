@@ -9,7 +9,8 @@ export class Check extends Component {
     componentDidMount(){
         $.ajax({
         type:'GET',
-        url:'http://localhost:3001/auth/validate_token',
+        // url:'http://localhost:3001/auth/validate_token',
+        url:'https://server-gpaj.herokuapp.com/auth/validate_token',
         dataType:"JSON",
         headers: JSON.parse(sessionStorage.getItem('user'))
         })
