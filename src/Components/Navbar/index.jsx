@@ -27,7 +27,7 @@ export class NabvarRegister extends Component {
         $.ajax({
         type:'DELETE',
         url:"http://localhost:3001/auth/sign_out",
-        url:"https://server-gpaj.herokuapp.com/auth/sign_out",
+        // url:"https://server-gpaj.herokuapp.com/auth/sign_out",
         data: JSON.parse(sessionStorage.user),
         success: function() {
             Notify.config({ duration: 5000 })

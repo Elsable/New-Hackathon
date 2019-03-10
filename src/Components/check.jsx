@@ -9,8 +9,8 @@ export class Check extends Component {
     componentDidMount(){
         $.ajax({
         type:'GET',
-        // url:'http://localhost:3001/auth/validate_token',
-        url:'https://server-gpaj.herokuapp.com/auth/validate_token',
+        url:'http://localhost:3001/auth/validate_token',
+        // url:'https://server-gpaj.herokuapp.com/auth/validate_token',
         dataType:"JSON",
         headers: JSON.parse(sessionStorage.getItem('user'))
         })
@@ -22,7 +22,7 @@ export class Check extends Component {
         if(sessionStorage.getItem('user')){
             return (
                 <div>
-                    <NabvarRegister name={JSON.parse(sessionStorage.getItem('user')).client}/>
+                    <NabvarRegister name={JSON.parse(sessionStorage.getItem('user')).uid}/>
                     <Affix offsetTop={0}>
                     <MenuP/>
                     }

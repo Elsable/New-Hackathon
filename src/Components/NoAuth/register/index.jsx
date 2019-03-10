@@ -41,8 +41,8 @@ class Register extends Component {
       ){
         $.ajax({
           type: 'POST',
-          // url:'http://localhost:3001/auth',
-          url:'https://server-gpaj.herokuapp.com/auth',
+          url:'http://localhost:3001/auth',
+          // url:'https://server-gpaj.herokuapp.com/auth',
           data: {
               email: this.email.value,
               password: this.password.value,

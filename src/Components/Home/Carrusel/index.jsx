@@ -1,5 +1,5 @@
 import React,{Fragment, Component} from 'react'
-import { SearchInput, Notify } from 'zent'
+import { SearchInput, Notify, Button } from 'zent'
 
 export class Carrusel extends Component {
   state={
@@ -56,15 +56,13 @@ export class Carrusel extends Component {
               <div className="column is-half is-narrow">
                 <div className="field has-addons">
                   <div className="control is-expanded">
-                    <SearchInput className="input" type="text" placeholder="Busqueda General"
+                    <SearchInput type="text" placeholder="Busqueda General"
                         value={value}
                         onChange={this.onChange}                        
                         onPressEnter={this.onPressEnter}/>
                   </div>
                   <div className="control">
-                    <a className="button is-info" onClick={this.onPressEnter}>
-                      Search
-                    </a>
+                  <Button type="primary" onClick={this.onPressEnter}>Search</Button>
                   </div>
                 </div>
               </div>
